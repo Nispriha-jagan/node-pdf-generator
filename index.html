@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invoice Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Invoice Generator</h1>
+
+    <form id="invoiceForm">
+      <h2>From</h2>
+      <input type="text" name="from_name" placeholder="Company Name" required>
+      <input type="text" name="from_address" placeholder="Address" required>
+      <input type="text" name="from_city" placeholder="City" required>
+      <input type="text" name="from_zipcode" placeholder="Zipcode" required>
+      <input type="text" name="from_country" placeholder="Country" required>
+      <input type="text" name="from_phone" placeholder="Phone" required>
+
+      <h2>Billed To</h2>
+      <input type="text" name="to_name" placeholder="Client Name" required>
+      <input type="text" name="to_address" placeholder="Address" required>
+      <input type="text" name="to_city" placeholder="City" required>
+      <input type="text" name="to_zipcode" placeholder="Zipcode" required>
+      <input type="text" name="to_country" placeholder="Country" required>
+      <input type="text" name="to_phone" placeholder="Phone" required>
+
+      <h2>Invoice Details</h2>
+      <input type="text" name="invoice_number" placeholder="Invoice Number" required>
+      <input type="date" name="dateIssued" required>
+      <input type="date" name="dueDate" required>
+
+      <h2>Items</h2>
+      <div id="items"></div>
+      <button type="button" onclick="addItem()">+ Add Item</button>
+
+      <h2>Other</h2>
+      <input type="number" name="discount" placeholder="Discount" step="0.01" required>
+      <input type="number" name="tax" placeholder="Tax" step="0.01" required>
+      <input type="number" name="depositRequested" placeholder="Deposit Requested" step="0.01" required>
+      <textarea name="notes" placeholder="Notes"></textarea>
+      <textarea name="terms" placeholder="Terms"></textarea>
+
+      <button type="submit">Generate PDF</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
